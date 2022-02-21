@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@200;300;400&display=swap');:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    height: 100%;
+    font-family: 'Lexend Deca', cursive;
+    margin: 0;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2rem;
+    color: var(--light-grey);
+}
+
+/* #################### CAR CONTAINER ####################*/
+.car-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+    /* #################### CAR CARDS ####################*/
+article {
+    position: relative;
+    height: 25rem;
+    width: 100%;
+    padding: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+article p {
+    padding-bottom: 1.5rem;
+    font-size: .8rem;
+    color: var(--transparent-white);
+}
+
+.sedan-card {
+    background: var(--orange);
+    border-radius: 12px 12px 0 0;
+}
+
+.suv-card {
+    background: var(--cyan);
+}
+
+.luxury-card {
+    background: var(--dark-cyan);
+    border-radius: 0 0 12px 12px;
+}
+
+/* #################### BUTTONS ####################*/
+.btn {
+    position: absolute;
+    bottom: 2rem;
+    height: 2.5rem;
+    width: 8rem;
+    border-radius: 20px;
+    background: white;
+    border: 2px solid white;
+    cursor: pointer;
+    font-family: "Lexend Deca", cursive;
+    font-weight: 400;
+}
+.btn:hover {
+    background: transparent;
+    color: white;
+}
+
+.sedan-btn {
+    color: var(--orange);
+}
+
+.suv-btn {
+    color: var(--cyan);
+}
+
+.luxury-btn {
+    color: var(--dark-cyan);
+}
+
+@media (min-width: 1000px) {
+    .car-container {
+        flex-direction: row;
+        width: 70%;
+        max-width: 1000px;
+    }
+
+    .sedan-card {
+        border-radius: 12px 0 0 12px;
+    }
+
+    .luxury-card {
+        border-radius: 0 12px 12px 0;
+    }
+}
+
+/* #################### FOOTER ####################*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
